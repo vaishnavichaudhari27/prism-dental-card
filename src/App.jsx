@@ -189,16 +189,52 @@ function App() {
       <section className="card" aria-labelledby="clinic-name">
         <div className="card-glow" aria-hidden="true" />
         <div className="card-content">
-          <p className="eyebrow">A SPECIALIST DENTAL CLINIC IN PUNE</p>
-          <h1 id="clinic-name">{clinic.name}</h1>
-          <p className="subtitle">{clinic.tagline}</p>
+          <div className="hero">
+            <div className="hero-copy">
+              <p className="eyebrow">A SPECIALIST DENTAL CLINIC IN PUNE</p>
+              <h1 id="clinic-name">{clinic.name}</h1>
+              <p className="subtitle">{clinic.tagline}</p>
 
-          <div className="gold-line" aria-hidden="true" />
+              <div className="gold-line" aria-hidden="true" />
 
-          <p className="location">
-            <Icon name="pin" />
-            <span>{clinic.location}</span>
-          </p>
+              <p className="location">
+                <Icon name="pin" />
+                <span>{clinic.location}</span>
+              </p>
+            </div>
+
+            <div className="hero-art" aria-hidden="true">
+              <span className="hero-orbit hero-orbit-outer" />
+              <span className="hero-orbit hero-orbit-inner" />
+              <svg
+                className="tooth-illustration"
+                viewBox="0 0 160 180"
+                fill="none"
+              >
+                <path
+                  d="M43 25C23 31 17 49 22 72c4 18 12 31 18 53 5 18 12 31 21 29 10-2 8-31 19-31s9 29 19 31c9 2 16-11 21-29 6-22 14-35 18-53 5-23-1-41-21-47-13-4-25 4-37 4s-24-8-37-4Z"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M51 48c8-5 17-6 26-2m32 2c-8-5-17-6-26-2"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  opacity=".48"
+                />
+                <path
+                  d="M131 20v15m-7.5-7.5h15M23 97v11m-5.5-5.5h11"
+                  stroke="#C8A65D"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <span className="hero-art-caption">A brighter kind of care</span>
+            </div>
+          </div>
 
           <nav className="action-grid" aria-label="Clinic contact actions">
             {phoneLines[0] && (
